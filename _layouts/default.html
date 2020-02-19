@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+
+  {%- include header.html -%}
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
+
+  {%- if jekyll.environment == 'production' -%}
+  {%- include analytics.html -%}
+  {%- endif -%}
+
+  <style>
+    .footer {
+        position: fixed;
+        left: 10;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+  </style>
+
+  <div class="footer">
+    <p><small>&copy; Copyright 2019-2020, Sanath Keshav</small></p>
+  </div>
+
+</body>
+
+</html>
